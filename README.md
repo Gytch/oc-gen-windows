@@ -8,7 +8,7 @@ and Respect to Dortania's Guide
 - Includes Prebuilt SSDT Files compiled
 - Ready to boot EFI
 - 
-![logo](https://ibb.co/1K03yTx)
+![logo](https://i.ibb.co/bL6xwXn/cooltext377986341659993.png)
 
 ## Credits
 *Developed and Designed by Gytch*<br>
