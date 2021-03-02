@@ -7,7 +7,9 @@ and Respect to Dortania's Guide
 - Stable by using Dortania's Latest guide
 - Includes Prebuilt SSDT Files compiled
 - Ready to boot EFI
+- 
+![logo](https://ibb.co/1K03yTx)
 
 ## Credits
-*Developed and Designed by Gytch*
+*Developed and Designed by Gytch*<br>
 *Dortania's Guide for proper configuration*
