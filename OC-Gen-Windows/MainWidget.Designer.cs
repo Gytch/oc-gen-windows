@@ -1,7 +1,7 @@
 ﻿
 namespace OC_Gen_Windows
 {
-    partial class Form1
+    partial class MainWidget
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace OC_Gen_Windows
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWidget));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Label();
@@ -626,7 +626,7 @@ namespace OC_Gen_Windows
             this.smGenbtn.Text = "Generate SMBIOS";
             this.smGenbtn.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainWidget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -644,7 +644,7 @@ namespace OC_Gen_Windows
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainWidget";
             this.Text = "OC-Gen Windows Edition 0.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);

@@ -2,9 +2,9 @@ C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\bin\Debug\OC-Gen-Wind
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\bin\Debug\OC-Gen-Windows.exe
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\bin\Debug\OC-Gen-Windows.pdb
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC-Gen-Windows.csprojAssemblyReference.cache
-C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC_Gen_Windows.Form1.resources
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC_Gen_Windows.Properties.Resources.resources
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC-Gen-Windows.csproj.GenerateResource.cache
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC-Gen-Windows.csproj.CoreCompileInputs.cache
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC-Gen-Windows.exe
 C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC-Gen-Windows.pdb
+C:\Users\hareth\source\repos\OC-Gen-Windows\OC-Gen-Windows\obj\Debug\OC_Gen_Windows.MainWidget.resources

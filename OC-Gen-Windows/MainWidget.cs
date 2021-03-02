@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OC_Gen_Windows
 {
-    public partial class Form1 : Form
+    public partial class MainWidget : Form
     {
-        public Form1()
+        public MainWidget()
         {
             InitializeComponent();
         }
