@@ -12,16 +12,22 @@ namespace OC_Gen_Windows
 {
     public partial class MainWidget : Form
     {
+        /*
+         * 
+         *  OC Gen X
+         *  Coded by Gytch
+         *  Credits: VisualStyler .NET for Theme
+         *  License: MIT License
+         * 
+         */
         public MainWidget()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //
+        // Ability to draw Windows Form
+        //
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -38,6 +44,47 @@ namespace OC_Gen_Windows
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+        // End
+
+        //
+        // UI Functions
+        //
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //
+            // Disable Other Tabs if Hardware is not selected
+            //
+            if (hardwareCombobox.Text == "")
+            {
+                EnableTab(Kext, false);
+                EnableTab(EFIDriver, false);
+                EnableTab(SMBios, false);
+                EnableTab(Extra, false);
+            }
+        }
+
+        // If hardware is selected, Enable other tabs
+        private void hardwareCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string getHardwareComboboxText = hardwareCombobox.Text;
+            // Validate Selection
+            if( getHardwareComboboxText.Contains("<----"))
+            {
+                // Invalid selection
+                MessageBox.Show("Invalid Selection", "Error");
+
+            } else
+            {
+                //
+                // Valid Selection
+                //
+                EnableTab(Kext, true);
+                EnableTab(EFIDriver, true);
+                EnableTab(SMBios, true);
+                EnableTab(Extra, true);
+            }
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -48,5 +95,29 @@ namespace OC_Gen_Windows
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (audioListbox.GetItemCheckState(0) == CheckState.Checked)
+            {
+                codecEditbox.Enabled = true;
+            } else
+            {
+                codecEditbox.Enabled = false;
+            }
+        }
+        // END
+
+        //
+        // Coded-Functions
+        //
+
+        // Enable/Disable Tab
+        public static void EnableTab(TabPage page, bool enable)
+        {
+            foreach (Control ctl in page.Controls) ctl.Enabled = enable;
+        }
+
+       
     }
 }
