@@ -2,6 +2,8 @@
 A Utility to create EFI Folder for Opencore bootloader, With proper configuration <br>
 and Respect to Dortania's Guide
 
+**THIS APP IS NOT READY YET, NO FUNCTIONS OR ANYTHING IS ADDED**
+
 ![menu](https://i.ibb.co/9yT0Qt4/1.png)
 ![menu2](https://i.ibb.co/PTVZGxW/5.png)
 
