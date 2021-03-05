@@ -1,11 +1,15 @@
-## Opencore EFI Generator for Windows
+## Opencore EFI Generator for Windows<br>
+**THIS APP IS NOT READY YET, NO FUNCTIONS OR ANYTHING IS ADDED** <br>
 A Utility to create EFI Folder for Opencore bootloader, With proper configuration <br>
 and Respect to Dortania's Guide
 
-**THIS APP IS NOT READY YET, NO FUNCTIONS OR ANYTHING IS ADDED**
+App is in development, It is not out yet<br>
+E.T.A To be full functional 10th March 2021
 
-![menu](https://i.ibb.co/9yT0Qt4/1.png)
-![menu2](https://i.ibb.co/PTVZGxW/5.png)
+
+![menu](https://i.ibb.co/CWChTH8/1.png)
+![menu2](https://i.ibb.co/t44YDrg/2.png)
+![menu3](https://i.ibb.co/FBF067q/3.png)
 
 ## What does it do?
 - Generates a full configured EFI Folder
@@ -13,9 +17,8 @@ and Respect to Dortania's Guide
 - Includes Prebuilt SSDT Files compiled
 - Ready to boot EFI
 
-![logo](https://i.ibb.co/bL6xwXn/cooltext377986341659993.png)
-
 
 ## Credits
 *Developed and Designed by Gytch*<br>
 *Dortania's Guide for proper configuration*
+
