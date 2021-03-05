@@ -8,5 +8,5 @@ So we can add them in the actual solution and program
 What need to be added
 - Opencore EFI Drivers
 - Opencore Prebuilt SSDT
-- Opencore Base Files
+- ~Opencore Base Files~
 - Opencore Kexts
