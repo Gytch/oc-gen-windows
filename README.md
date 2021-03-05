@@ -21,4 +21,4 @@ E.T.A To be full functional 10th March 2021
 ## Credits
 *Developed and Designed by Gytch*<br>
 *Dortania's Guide for proper configuration*
-
+*Dortania's Getting Started for SSDT*
