@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables.cs" />
     <EmbeddedResource Include="MainWidget.resx">
       <DependentUpon>MainWidget.cs</DependentUpon>
     </EmbeddedResource>

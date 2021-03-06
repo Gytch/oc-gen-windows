@@ -24,50 +24,23 @@ namespace OC_Gen_Windows
         public static List<string> selectedKexts = new List<string>();
         public static string bootargs;
 
+        private bool isLaptopHardware = false;
+
         // Hardware list
         //
         //
-        string[] intelHardware_laptop =
+     
+        private void hardware_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            "Sandy Bridge",
-            "Ivy Bridge",
-            "Haswell",
-            "Broadwell",
-            "Skylake",
-            "Kaby Lake",
-            "Coffee Lake / Whiskey Lake",
-            "Coffee Lake Plus / Comet Lake",
-            "Ice Lake"
-        };
-
-        string[] intelHardware_desktop =
-        {
-            "Clarkdale",
-            "Sandy Bridge",
-            "Ivy Bridge",
-            "Haswell",
-            "Skylake",
-            "Kaby Lake",
-            "Coffee Lake",
-            "Comet Lake"
-        };
-
-        string[] intelHardware_HEDT =
-        {
-            "Nehalem / Westmere",
-            "Sandy/Ivy Bridge-E",
-            "Haswell-E",
-            "Broadwell-E",
-            "Skylake-X/W",
-            "Cascade Lake-X/W"
-        };
-
-        string[] amdHardware =
-        {
-            "Buildozer15h / Jaguar 16h",
-            "Ryzen / Threadripper 17h/19h"
-        };
-
+            if (hardware_comboBox.SelectedIndex < 9)
+            {
+                isLaptopHardware = false;
+            } else
+            {
+                isLaptopHardware = true;
+                kextsPanel_btn_Laptop.Enabled = true;
+            }
+        }
 
         public MainWidget()
         {
@@ -86,8 +59,11 @@ namespace OC_Gen_Windows
             // Hide Kext's tab
             KextsTab.ItemSize = new Size(0, 1);
 
-            // Hide Kexts->Graphic->Intel Group box
+            // Disable Kexts->Graphic->Intel Group box
             Graphics_Intel_group.Enabled = false;
+
+     
+            audio_textbox_Alcid.Enabled = false;
         }
 
         //
@@ -157,18 +133,19 @@ namespace OC_Gen_Windows
      
         private void trigger_IntelHARDWARE_Click(object sender, EventArgs e)
         {
+            isLaptopHardware = true;
             hardware_comboBox.Items.Clear();
             hardware_comboBox.Enabled = true;
             hardware_comboBox.Items.Add("<-- DESKTOP -->");
-            for (int i = 0; i < intelHardware_desktop.Length; i++)
+            for (int i = 0; i < Variables.intelHardware_desktop.Length; i++)
             {
-                hardware_comboBox.Items.Add(intelHardware_desktop[i]);
+                hardware_comboBox.Items.Add(Variables.intelHardware_desktop[i]);
             }
             
             hardware_comboBox.Items.Add("<-- LAPTOPS -->");
-            for (int i = 0; i < intelHardware_laptop.Length; i++)
+            for (int i = 0; i < Variables.intelHardware_laptop.Length; i++)
             {
-                hardware_comboBox.Items.Add(intelHardware_laptop[i]);
+                hardware_comboBox.Items.Add(Variables.intelHardware_laptop[i]);
             }
 
             hardware_comboBox.SelectedIndex = 1;
@@ -179,16 +156,22 @@ namespace OC_Gen_Windows
             tab_Generate.Enabled = true;
             deg("Trigger Intel Hardware", 1);
 
+            if (hardware_comboBox.SelectedIndex < 9)
+            {
+                isLaptopHardware = false;
+            }
+
         }
 
         private void xuiButton1_Click(object sender, EventArgs e)
         {
+            isLaptopHardware = false;
             hardware_comboBox.Items.Clear();
             hardware_comboBox.Enabled = true;
             hardware_comboBox.Items.Add("<-- INTEL HEDT SUPER -->");
-            for (int i = 0; i < intelHardware_HEDT.Length; i++)
+            for (int i = 0; i < Variables.intelHardware_HEDT.Length; i++)
             {
-                hardware_comboBox.Items.Add(intelHardware_HEDT[i]);
+                hardware_comboBox.Items.Add(Variables.intelHardware_HEDT[i]);
             }
             hardware_comboBox.SelectedIndex = 1;
             tab_Kexts.Enabled = true;
@@ -203,12 +186,13 @@ namespace OC_Gen_Windows
 
         private void xuiButton2_Click(object sender, EventArgs e)
         {
+            isLaptopHardware = false;
             hardware_comboBox.Items.Clear();
             hardware_comboBox.Enabled = true;
             hardware_comboBox.Items.Add("<-- AMD -->");
-            for (int i = 0; i < amdHardware.Length; i++)
+            for (int i = 0; i < Variables.amdHardware.Length; i++)
             {
-                hardware_comboBox.Items.Add(amdHardware[i]);
+                hardware_comboBox.Items.Add(Variables.amdHardware[i]);
             }
             hardware_comboBox.SelectedIndex = 1;
             tab_Kexts.Enabled = true;
@@ -218,6 +202,7 @@ namespace OC_Gen_Windows
             tab_Generate.Enabled = true;
 
             deg("Trigger AMD Hardware", 1);
+           
         }
 
         //
@@ -233,11 +218,35 @@ namespace OC_Gen_Windows
         {
             panel_Kexts.BringToFront();
             deg("Tab Kexts Menu", 1);
+            if (isLaptopHardware == true && hardware_comboBox.SelectedIndex > 9)
+            {
+                kextsPanel_btn_Laptop.Enabled = true;
+            }
+            else if (isLaptopHardware == false)
+            {
+                kextsPanel_btn_Laptop.Enabled = false;
+            }
         }
         private void tab_Generate_Click(object sender, EventArgs e)
         {
             panel_Generate.BringToFront();
         }
+
+        private void tab_SMBios_Click(object sender, EventArgs e)
+        {
+            panel_SMBios.BringToFront();
+        }
+
+        private void tab_Quirks_Click(object sender, EventArgs e)
+        {
+            panel_Quirks.BringToFront();
+        }
+
+        private void tab_Drivers_Click(object sender, EventArgs e)
+        {
+            panel_EFIDrivers.BringToFront();
+        }
+
 
         //
         // START: Kexts- Tab
@@ -341,9 +350,47 @@ namespace OC_Gen_Windows
         }
 
 
+
+
         //
         // END: Functions
         //
 
+        //
+        // START EFI GENERATING
+        private void Generate_btn_Gen_Click(object sender, EventArgs e)
+        {
+            Generate_btn_ClearDebugs.Visible = false;
+            tab_Kexts.Enabled = false;
+            tab_Drivers.Enabled = false;
+            tab_Hardware.Enabled = false;
+            tab_Quirks.Enabled = false;
+            tab_SMBios.Enabled = false;
+            btn_Close.Enabled = false;
+            Generate_btn_Gen.Enabled = false;
+            Generate_debugWindow.ReadOnly = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SMbios_group_List_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SMbios_model_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Kext_Audio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

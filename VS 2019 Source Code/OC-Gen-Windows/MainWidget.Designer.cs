@@ -32,9 +32,6 @@ namespace OC_Gen_Windows
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWidget));
             this.panel_MainWidget = new System.Windows.Forms.Panel();
-            this.panel_Generate = new System.Windows.Forms.Panel();
-            this.Generate_debugWindow = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.tab_Generate = new System.Windows.Forms.Button();
             this.tab_SMBios = new System.Windows.Forms.Button();
             this.tab_Quirks = new System.Windows.Forms.Button();
@@ -67,20 +64,47 @@ namespace OC_Gen_Windows
             this.Network_wifiList = new System.Windows.Forms.CheckedListBox();
             this.Network_ethernetList = new System.Windows.Forms.CheckedListBox();
             this.Kext_Laptop = new System.Windows.Forms.TabPage();
+            this.Laptops_group_VoodooI2C = new XanderUI.XUICustomGroupbox();
+            this.Laptops_plugins_list = new System.Windows.Forms.CheckedListBox();
+            this.Laptops_listBox = new System.Windows.Forms.CheckedListBox();
             this.kextsPanel_btn_Laptop = new System.Windows.Forms.Button();
             this.kextsPanel_btn_Network = new System.Windows.Forms.Button();
             this.kextsPanel_btn_Graphics = new System.Windows.Forms.Button();
             this.kextsPanel_btn_Audio = new System.Windows.Forms.Button();
             this.kextsPanel_btn_Essentials = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel_Generate = new System.Windows.Forms.Panel();
+            this.Generate_btn_Gen = new System.Windows.Forms.Button();
+            this.Generate_btn_ClearDebugs = new XanderUI.XUISuperButton();
+            this.Generate_debugWindow = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel_Quirks = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel_SMBios = new System.Windows.Forms.Panel();
+            this.SMBios_model = new System.Windows.Forms.TextBox();
+            this.SMbios_group_List = new XanderUI.XUICustomGroupbox();
+            this.SMBios_UUID = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.SMBios_MLB = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.SMBios_serial = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label_windowTitle = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.label_Stripo = new System.Windows.Forms.Label();
             this.hover_InformationTip = new System.Windows.Forms.ToolTip(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.Generate_btn_ClearDebugs = new XanderUI.XUISuperButton();
+            this.Essentials_list2 = new System.Windows.Forms.CheckedListBox();
+            this.panel_EFIDrivers = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Drivers_list = new System.Windows.Forms.CheckedListBox();
             this.panel_MainWidget.SuspendLayout();
-            this.panel_Generate.SuspendLayout();
             this.panel_Hardware.SuspendLayout();
             this.panel_Kexts.SuspendLayout();
             this.KextsTab.SuspendLayout();
@@ -91,7 +115,14 @@ namespace OC_Gen_Windows
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Kext_Network.SuspendLayout();
+            this.Kext_Laptop.SuspendLayout();
+            this.Laptops_group_VoodooI2C.SuspendLayout();
+            this.panel_Generate.SuspendLayout();
+            this.panel_Quirks.SuspendLayout();
+            this.panel_SMBios.SuspendLayout();
+            this.SMbios_group_List.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
+            this.panel_EFIDrivers.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_MainWidget
@@ -106,42 +137,13 @@ namespace OC_Gen_Windows
             this.panel_MainWidget.Controls.Add(this.panel_Hardware);
             this.panel_MainWidget.Controls.Add(this.panel_Kexts);
             this.panel_MainWidget.Controls.Add(this.panel_Generate);
+            this.panel_MainWidget.Controls.Add(this.panel_EFIDrivers);
+            this.panel_MainWidget.Controls.Add(this.panel_Quirks);
+            this.panel_MainWidget.Controls.Add(this.panel_SMBios);
             this.panel_MainWidget.Location = new System.Drawing.Point(2, 42);
             this.panel_MainWidget.Name = "panel_MainWidget";
             this.panel_MainWidget.Size = new System.Drawing.Size(925, 319);
             this.panel_MainWidget.TabIndex = 2;
-            // 
-            // panel_Generate
-            // 
-            this.panel_Generate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
-            this.panel_Generate.Controls.Add(this.Generate_btn_ClearDebugs);
-            this.panel_Generate.Controls.Add(this.Generate_debugWindow);
-            this.panel_Generate.Controls.Add(this.label6);
-            this.panel_Generate.Location = new System.Drawing.Point(180, 6);
-            this.panel_Generate.Name = "panel_Generate";
-            this.panel_Generate.Size = new System.Drawing.Size(727, 301);
-            this.panel_Generate.TabIndex = 8;
-            // 
-            // Generate_debugWindow
-            // 
-            this.Generate_debugWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
-            this.Generate_debugWindow.Font = new System.Drawing.Font("Franklin Gothic Book", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generate_debugWindow.ForeColor = System.Drawing.Color.White;
-            this.Generate_debugWindow.Location = new System.Drawing.Point(12, 42);
-            this.Generate_debugWindow.Multiline = true;
-            this.Generate_debugWindow.Name = "Generate_debugWindow";
-            this.Generate_debugWindow.Size = new System.Drawing.Size(703, 153);
-            this.Generate_debugWindow.TabIndex = 1;
-            this.Generate_debugWindow.Text = "LAUNCHED -> DEBUG WINDOW\r\n";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(321, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 21);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Generate";
             // 
             // tab_Generate
             // 
@@ -172,6 +174,7 @@ namespace OC_Gen_Windows
             this.tab_SMBios.TabIndex = 4;
             this.tab_SMBios.Text = "SMBios";
             this.tab_SMBios.UseVisualStyleBackColor = true;
+            this.tab_SMBios.Click += new System.EventHandler(this.tab_SMBios_Click);
             this.tab_SMBios.MouseHover += new System.EventHandler(this.tab_SMBios_MouseHover);
             // 
             // tab_Quirks
@@ -187,6 +190,7 @@ namespace OC_Gen_Windows
             this.tab_Quirks.TabIndex = 4;
             this.tab_Quirks.Text = "Quirks";
             this.tab_Quirks.UseVisualStyleBackColor = true;
+            this.tab_Quirks.Click += new System.EventHandler(this.tab_Quirks_Click);
             this.tab_Quirks.MouseHover += new System.EventHandler(this.tab_Quirks_MouseHover);
             // 
             // tab_Drivers
@@ -202,6 +206,7 @@ namespace OC_Gen_Windows
             this.tab_Drivers.TabIndex = 2;
             this.tab_Drivers.Text = "Drivers";
             this.tab_Drivers.UseVisualStyleBackColor = true;
+            this.tab_Drivers.Click += new System.EventHandler(this.tab_Drivers_Click);
             this.tab_Drivers.MouseHover += new System.EventHandler(this.tab_Drivers_MouseHover);
             // 
             // tab_Kexts
@@ -254,10 +259,11 @@ namespace OC_Gen_Windows
             this.hardware_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hardware_comboBox.Enabled = false;
             this.hardware_comboBox.FormattingEnabled = true;
-            this.hardware_comboBox.Location = new System.Drawing.Point(171, 233);
+            this.hardware_comboBox.Location = new System.Drawing.Point(24, 240);
             this.hardware_comboBox.Name = "hardware_comboBox";
-            this.hardware_comboBox.Size = new System.Drawing.Size(360, 29);
+            this.hardware_comboBox.Size = new System.Drawing.Size(677, 29);
             this.hardware_comboBox.TabIndex = 6;
+            this.hardware_comboBox.SelectedIndexChanged += new System.EventHandler(this.hardware_comboBox_SelectedIndexChanged);
             // 
             // trigger_AMDHardware
             // 
@@ -271,10 +277,10 @@ namespace OC_Gen_Windows
             this.trigger_AMDHardware.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
             this.trigger_AMDHardware.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.trigger_AMDHardware.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.trigger_AMDHardware.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.trigger_AMDHardware.Location = new System.Drawing.Point(24, 111);
+            this.trigger_AMDHardware.ImagePosition = XanderUI.XUIButton.imgPosition.Right;
+            this.trigger_AMDHardware.Location = new System.Drawing.Point(19, 101);
             this.trigger_AMDHardware.Name = "trigger_AMDHardware";
-            this.trigger_AMDHardware.Size = new System.Drawing.Size(302, 50);
+            this.trigger_AMDHardware.Size = new System.Drawing.Size(663, 50);
             this.trigger_AMDHardware.TabIndex = 5;
             this.trigger_AMDHardware.TextColor = System.Drawing.Color.Black;
             this.trigger_AMDHardware.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -292,10 +298,10 @@ namespace OC_Gen_Windows
             this.trigger_HEDTHardware.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
             this.trigger_HEDTHardware.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.trigger_HEDTHardware.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.trigger_HEDTHardware.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.trigger_HEDTHardware.Location = new System.Drawing.Point(355, 45);
+            this.trigger_HEDTHardware.ImagePosition = XanderUI.XUIButton.imgPosition.Right;
+            this.trigger_HEDTHardware.Location = new System.Drawing.Point(340, 45);
             this.trigger_HEDTHardware.Name = "trigger_HEDTHardware";
-            this.trigger_HEDTHardware.Size = new System.Drawing.Size(276, 50);
+            this.trigger_HEDTHardware.Size = new System.Drawing.Size(342, 50);
             this.trigger_HEDTHardware.TabIndex = 4;
             this.trigger_HEDTHardware.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(102)))), ((int)(((byte)(113)))));
             this.trigger_HEDTHardware.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -365,6 +371,7 @@ namespace OC_Gen_Windows
             // kext_Essentials
             // 
             this.kext_Essentials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.kext_Essentials.Controls.Add(this.Essentials_list2);
             this.kext_Essentials.Controls.Add(this.Essentials_checkList);
             this.kext_Essentials.Location = new System.Drawing.Point(4, 30);
             this.kext_Essentials.Name = "kext_Essentials";
@@ -401,11 +408,11 @@ namespace OC_Gen_Windows
             this.Kext_Audio.Size = new System.Drawing.Size(683, 128);
             this.Kext_Audio.TabIndex = 1;
             this.Kext_Audio.Text = "Audio";
+            this.Kext_Audio.Click += new System.EventHandler(this.Kext_Audio_Click);
             // 
             // audio_textbox_Alcid
             // 
             this.audio_textbox_Alcid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
-            this.audio_textbox_Alcid.Enabled = false;
             this.audio_textbox_Alcid.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.audio_textbox_Alcid.ForeColor = System.Drawing.Color.White;
             this.audio_textbox_Alcid.Location = new System.Drawing.Point(327, 10);
@@ -579,12 +586,58 @@ namespace OC_Gen_Windows
             // Kext_Laptop
             // 
             this.Kext_Laptop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.Kext_Laptop.Controls.Add(this.Laptops_group_VoodooI2C);
+            this.Kext_Laptop.Controls.Add(this.Laptops_listBox);
             this.Kext_Laptop.Location = new System.Drawing.Point(4, 30);
             this.Kext_Laptop.Name = "Kext_Laptop";
             this.Kext_Laptop.Padding = new System.Windows.Forms.Padding(3);
             this.Kext_Laptop.Size = new System.Drawing.Size(683, 128);
             this.Kext_Laptop.TabIndex = 4;
             this.Kext_Laptop.Text = "Laptops";
+            // 
+            // Laptops_group_VoodooI2C
+            // 
+            this.Laptops_group_VoodooI2C.BorderColor = System.Drawing.Color.LightCyan;
+            this.Laptops_group_VoodooI2C.BorderWidth = 1;
+            this.Laptops_group_VoodooI2C.Controls.Add(this.Laptops_plugins_list);
+            this.Laptops_group_VoodooI2C.Location = new System.Drawing.Point(291, 10);
+            this.Laptops_group_VoodooI2C.Name = "Laptops_group_VoodooI2C";
+            this.Laptops_group_VoodooI2C.ShowText = true;
+            this.Laptops_group_VoodooI2C.Size = new System.Drawing.Size(366, 100);
+            this.Laptops_group_VoodooI2C.TabIndex = 29;
+            this.Laptops_group_VoodooI2C.TabStop = false;
+            this.Laptops_group_VoodooI2C.Text = "VoodooI2CPlugins";
+            this.Laptops_group_VoodooI2C.TextColor = System.Drawing.Color.LightCyan;
+            // 
+            // Laptops_plugins_list
+            // 
+            this.Laptops_plugins_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.Laptops_plugins_list.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.Laptops_plugins_list.ForeColor = System.Drawing.Color.White;
+            this.Laptops_plugins_list.FormattingEnabled = true;
+            this.Laptops_plugins_list.Items.AddRange(new object[] {
+            "VoodooI2CHID.kext",
+            "VoodooI2CElan.kext",
+            "VoodooI2CSynaptics.kext"});
+            this.Laptops_plugins_list.Location = new System.Drawing.Point(19, 25);
+            this.Laptops_plugins_list.Name = "Laptops_plugins_list";
+            this.Laptops_plugins_list.Size = new System.Drawing.Size(330, 54);
+            this.Laptops_plugins_list.TabIndex = 30;
+            // 
+            // Laptops_listBox
+            // 
+            this.Laptops_listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.Laptops_listBox.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.Laptops_listBox.ForeColor = System.Drawing.Color.White;
+            this.Laptops_listBox.FormattingEnabled = true;
+            this.Laptops_listBox.Items.AddRange(new object[] {
+            "VoodooPS2.kext",
+            "VoodooI2C.kext",
+            "VoodooSMBus.kext"});
+            this.Laptops_listBox.Location = new System.Drawing.Point(24, 10);
+            this.Laptops_listBox.Name = "Laptops_listBox";
+            this.Laptops_listBox.Size = new System.Drawing.Size(250, 104);
+            this.Laptops_listBox.TabIndex = 29;
             // 
             // kextsPanel_btn_Laptop
             // 
@@ -670,6 +723,234 @@ namespace OC_Gen_Windows
             this.label2.TabIndex = 0;
             this.label2.Text = "Kexts Configuration";
             // 
+            // panel_Generate
+            // 
+            this.panel_Generate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.panel_Generate.Controls.Add(this.Generate_btn_Gen);
+            this.panel_Generate.Controls.Add(this.Generate_btn_ClearDebugs);
+            this.panel_Generate.Controls.Add(this.Generate_debugWindow);
+            this.panel_Generate.Controls.Add(this.label6);
+            this.panel_Generate.Location = new System.Drawing.Point(180, 6);
+            this.panel_Generate.Name = "panel_Generate";
+            this.panel_Generate.Size = new System.Drawing.Size(727, 301);
+            this.panel_Generate.TabIndex = 8;
+            // 
+            // Generate_btn_Gen
+            // 
+            this.Generate_btn_Gen.AutoSize = true;
+            this.Generate_btn_Gen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(33)))), ((int)(((byte)(31)))));
+            this.Generate_btn_Gen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Generate_btn_Gen.Image = ((System.Drawing.Image)(resources.GetObject("Generate_btn_Gen.Image")));
+            this.Generate_btn_Gen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Generate_btn_Gen.Location = new System.Drawing.Point(19, 221);
+            this.Generate_btn_Gen.Name = "Generate_btn_Gen";
+            this.Generate_btn_Gen.Size = new System.Drawing.Size(689, 46);
+            this.Generate_btn_Gen.TabIndex = 9;
+            this.Generate_btn_Gen.Text = "Build EFI Files";
+            this.Generate_btn_Gen.UseVisualStyleBackColor = true;
+            this.Generate_btn_Gen.Click += new System.EventHandler(this.Generate_btn_Gen_Click);
+            // 
+            // Generate_btn_ClearDebugs
+            // 
+            this.Generate_btn_ClearDebugs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.Generate_btn_ClearDebugs.ButtonImage = ((System.Drawing.Image)(resources.GetObject("Generate_btn_ClearDebugs.ButtonImage")));
+            this.Generate_btn_ClearDebugs.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.Generate_btn_ClearDebugs.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.Generate_btn_ClearDebugs.ButtonText = "Clear";
+            this.Generate_btn_ClearDebugs.CornerRadius = 6;
+            this.Generate_btn_ClearDebugs.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.Generate_btn_ClearDebugs.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(24)))));
+            this.Generate_btn_ClearDebugs.HoverTextColor = System.Drawing.Color.White;
+            this.Generate_btn_ClearDebugs.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.Generate_btn_ClearDebugs.Location = new System.Drawing.Point(577, 175);
+            this.Generate_btn_ClearDebugs.Name = "Generate_btn_ClearDebugs";
+            this.Generate_btn_ClearDebugs.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.Generate_btn_ClearDebugs.SelectedTextColor = System.Drawing.Color.White;
+            this.Generate_btn_ClearDebugs.Size = new System.Drawing.Size(138, 21);
+            this.Generate_btn_ClearDebugs.SuperSelected = false;
+            this.Generate_btn_ClearDebugs.TabIndex = 2;
+            this.Generate_btn_ClearDebugs.TextColor = System.Drawing.Color.White;
+            this.Generate_btn_ClearDebugs.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.Generate_btn_ClearDebugs.Click += new System.EventHandler(this.Generate_btn_ClearDebugs_Click);
+            // 
+            // Generate_debugWindow
+            // 
+            this.Generate_debugWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.Generate_debugWindow.Font = new System.Drawing.Font("Franklin Gothic Book", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Generate_debugWindow.ForeColor = System.Drawing.Color.White;
+            this.Generate_debugWindow.Location = new System.Drawing.Point(12, 42);
+            this.Generate_debugWindow.Multiline = true;
+            this.Generate_debugWindow.Name = "Generate_debugWindow";
+            this.Generate_debugWindow.Size = new System.Drawing.Size(703, 153);
+            this.Generate_debugWindow.TabIndex = 1;
+            this.Generate_debugWindow.Text = "LAUNCHED -> DEBUG WINDOW\r\n";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(321, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 21);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Generate";
+            // 
+            // panel_Quirks
+            // 
+            this.panel_Quirks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.panel_Quirks.Controls.Add(this.label9);
+            this.panel_Quirks.Controls.Add(this.label8);
+            this.panel_Quirks.Controls.Add(this.textBox1);
+            this.panel_Quirks.Controls.Add(this.label7);
+            this.panel_Quirks.Location = new System.Drawing.Point(180, 4);
+            this.panel_Quirks.Name = "panel_Quirks";
+            this.panel_Quirks.Size = new System.Drawing.Size(727, 297);
+            this.panel_Quirks.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Franklin Gothic Book", 9F);
+            this.label9.Location = new System.Drawing.Point(25, 97);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(252, 32);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Please do not use alcid=\r\nIt is already included in the Kexts/Audio Section";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 21);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Boot Args";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(609, 26);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "-v keepsyms=1 debug=0x100";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(339, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 21);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Quirks";
+            // 
+            // panel_SMBios
+            // 
+            this.panel_SMBios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.panel_SMBios.Controls.Add(this.SMBios_model);
+            this.panel_SMBios.Controls.Add(this.SMbios_group_List);
+            this.panel_SMBios.Controls.Add(this.label11);
+            this.panel_SMBios.Controls.Add(this.label12);
+            this.panel_SMBios.Location = new System.Drawing.Point(177, 2);
+            this.panel_SMBios.Name = "panel_SMBios";
+            this.panel_SMBios.Size = new System.Drawing.Size(727, 297);
+            this.panel_SMBios.TabIndex = 8;
+            // 
+            // SMBios_model
+            // 
+            this.SMBios_model.Location = new System.Drawing.Point(114, 55);
+            this.SMBios_model.MaxLength = 12;
+            this.SMBios_model.Name = "SMBios_model";
+            this.SMBios_model.Size = new System.Drawing.Size(213, 26);
+            this.SMBios_model.TabIndex = 15;
+            // 
+            // SMbios_group_List
+            // 
+            this.SMbios_group_List.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(35)))), ((int)(((byte)(34)))));
+            this.SMbios_group_List.BorderWidth = 3;
+            this.SMbios_group_List.Controls.Add(this.SMBios_UUID);
+            this.SMbios_group_List.Controls.Add(this.label14);
+            this.SMbios_group_List.Controls.Add(this.SMBios_MLB);
+            this.SMbios_group_List.Controls.Add(this.label13);
+            this.SMbios_group_List.Controls.Add(this.SMBios_serial);
+            this.SMbios_group_List.Controls.Add(this.label10);
+            this.SMbios_group_List.Location = new System.Drawing.Point(31, 89);
+            this.SMbios_group_List.Name = "SMbios_group_List";
+            this.SMbios_group_List.ShowText = true;
+            this.SMbios_group_List.Size = new System.Drawing.Size(582, 137);
+            this.SMbios_group_List.TabIndex = 7;
+            this.SMbios_group_List.TabStop = false;
+            this.SMbios_group_List.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(35)))), ((int)(((byte)(34)))));
+            this.SMbios_group_List.Enter += new System.EventHandler(this.SMbios_group_List_Enter);
+            // 
+            // SMBios_UUID
+            // 
+            this.SMBios_UUID.Location = new System.Drawing.Point(65, 92);
+            this.SMBios_UUID.MaxLength = 36;
+            this.SMBios_UUID.Name = "SMBios_UUID";
+            this.SMBios_UUID.Size = new System.Drawing.Size(470, 26);
+            this.SMBios_UUID.TabIndex = 13;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 95);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 21);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "UUID";
+            // 
+            // SMBios_MLB
+            // 
+            this.SMBios_MLB.Location = new System.Drawing.Point(66, 55);
+            this.SMBios_MLB.MaxLength = 17;
+            this.SMBios_MLB.Name = "SMBios_MLB";
+            this.SMBios_MLB.Size = new System.Drawing.Size(292, 26);
+            this.SMBios_MLB.TabIndex = 11;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(13, 58);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 21);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "MLB";
+            // 
+            // SMBios_serial
+            // 
+            this.SMBios_serial.Location = new System.Drawing.Point(65, 19);
+            this.SMBios_serial.MaxLength = 12;
+            this.SMBios_serial.Name = "SMBios_serial";
+            this.SMBios_serial.Size = new System.Drawing.Size(213, 26);
+            this.SMBios_serial.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 21);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Serial";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(24, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 21);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Mac Model";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(339, 11);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(61, 21);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "SMBios";
+            // 
             // label_windowTitle
             // 
             this.label_windowTitle.AutoSize = true;
@@ -708,30 +989,75 @@ namespace OC_Gen_Windows
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 18);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Build: 005b";
+            this.label5.Text = "Build: 007b";
             // 
-            // Generate_btn_ClearDebugs
+            // Essentials_list2
             // 
-            this.Generate_btn_ClearDebugs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
-            this.Generate_btn_ClearDebugs.ButtonImage = ((System.Drawing.Image)(resources.GetObject("Generate_btn_ClearDebugs.ButtonImage")));
-            this.Generate_btn_ClearDebugs.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.Generate_btn_ClearDebugs.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.Generate_btn_ClearDebugs.ButtonText = "Clear";
-            this.Generate_btn_ClearDebugs.CornerRadius = 5;
-            this.Generate_btn_ClearDebugs.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.Generate_btn_ClearDebugs.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
-            this.Generate_btn_ClearDebugs.HoverTextColor = System.Drawing.Color.White;
-            this.Generate_btn_ClearDebugs.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.Generate_btn_ClearDebugs.Location = new System.Drawing.Point(12, 164);
-            this.Generate_btn_ClearDebugs.Name = "Generate_btn_ClearDebugs";
-            this.Generate_btn_ClearDebugs.SelectedBackColor = System.Drawing.Color.LimeGreen;
-            this.Generate_btn_ClearDebugs.SelectedTextColor = System.Drawing.Color.White;
-            this.Generate_btn_ClearDebugs.Size = new System.Drawing.Size(138, 40);
-            this.Generate_btn_ClearDebugs.SuperSelected = false;
-            this.Generate_btn_ClearDebugs.TabIndex = 2;
-            this.Generate_btn_ClearDebugs.TextColor = System.Drawing.Color.White;
-            this.Generate_btn_ClearDebugs.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.Generate_btn_ClearDebugs.Click += new System.EventHandler(this.Generate_btn_ClearDebugs_Click);
+            this.Essentials_list2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.Essentials_list2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.Essentials_list2.ForeColor = System.Drawing.Color.White;
+            this.Essentials_list2.FormattingEnabled = true;
+            this.Essentials_list2.Items.AddRange(new object[] {
+            "USBInjectall.kext",
+            "SATA-unsupported.kext",
+            "XHCI-unsupported.kext",
+            "CtlnaAHCIPort.kext"});
+            this.Essentials_list2.Location = new System.Drawing.Point(275, 10);
+            this.Essentials_list2.Name = "Essentials_list2";
+            this.Essentials_list2.Size = new System.Drawing.Size(250, 104);
+            this.Essentials_list2.TabIndex = 25;
+            // 
+            // panel_EFIDrivers
+            // 
+            this.panel_EFIDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.panel_EFIDrivers.Controls.Add(this.Drivers_list);
+            this.panel_EFIDrivers.Controls.Add(this.label15);
+            this.panel_EFIDrivers.Controls.Add(this.label17);
+            this.panel_EFIDrivers.Location = new System.Drawing.Point(177, 3);
+            this.panel_EFIDrivers.Name = "panel_EFIDrivers";
+            this.panel_EFIDrivers.Size = new System.Drawing.Size(727, 297);
+            this.panel_EFIDrivers.TabIndex = 8;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Franklin Gothic Book", 9F);
+            this.label15.Location = new System.Drawing.Point(290, 33);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(185, 32);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "EFI Drivers are used only in loader\r\n\"Openruntime is already included \"";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(339, 11);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(81, 21);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "EFI Drivers";
+            // 
+            // Drivers_list
+            // 
+            this.Drivers_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.Drivers_list.Font = new System.Drawing.Font("Comic Sans MS", 11F);
+            this.Drivers_list.ForeColor = System.Drawing.Color.White;
+            this.Drivers_list.FormattingEnabled = true;
+            this.Drivers_list.Items.AddRange(new object[] {
+            "HfsPlus.efi",
+            "HfsPlusLegacy.efi",
+            "OpenPartitionDxe.efi",
+            "OpenUsbKbDxe.efi",
+            "NvmExpressDxe.efi",
+            "Ps2KeyboardDxe.efi",
+            "Ps2MouseDxe.efi",
+            "UsbMouseDxe.efi",
+            "XhciDxe.efi"});
+            this.Drivers_list.Location = new System.Drawing.Point(275, 71);
+            this.Drivers_list.Name = "Drivers_list";
+            this.Drivers_list.Size = new System.Drawing.Size(250, 211);
+            this.Drivers_list.TabIndex = 25;
             // 
             // MainWidget
             // 
@@ -755,8 +1081,6 @@ namespace OC_Gen_Windows
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel_MainWidget.ResumeLayout(false);
             this.panel_MainWidget.PerformLayout();
-            this.panel_Generate.ResumeLayout(false);
-            this.panel_Generate.PerformLayout();
             this.panel_Hardware.ResumeLayout(false);
             this.panel_Hardware.PerformLayout();
             this.panel_Kexts.ResumeLayout(false);
@@ -772,7 +1096,20 @@ namespace OC_Gen_Windows
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Kext_Network.ResumeLayout(false);
+            this.Kext_Laptop.ResumeLayout(false);
+            this.Laptops_group_VoodooI2C.ResumeLayout(false);
+            this.Laptops_group_VoodooI2C.PerformLayout();
+            this.panel_Generate.ResumeLayout(false);
+            this.panel_Generate.PerformLayout();
+            this.panel_Quirks.ResumeLayout(false);
+            this.panel_Quirks.PerformLayout();
+            this.panel_SMBios.ResumeLayout(false);
+            this.panel_SMBios.PerformLayout();
+            this.SMbios_group_List.ResumeLayout(false);
+            this.SMbios_group_List.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
+            this.panel_EFIDrivers.ResumeLayout(false);
+            this.panel_EFIDrivers.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -828,6 +1165,31 @@ namespace OC_Gen_Windows
         private System.Windows.Forms.TextBox Generate_debugWindow;
         private System.Windows.Forms.Label label6;
         private XanderUI.XUISuperButton Generate_btn_ClearDebugs;
+        private System.Windows.Forms.Button Generate_btn_Gen;
+        private XanderUI.XUICustomGroupbox Laptops_group_VoodooI2C;
+        private System.Windows.Forms.CheckedListBox Laptops_listBox;
+        private System.Windows.Forms.CheckedListBox Laptops_plugins_list;
+        private System.Windows.Forms.Panel panel_Quirks;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel_SMBios;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private XanderUI.XUICustomGroupbox SMbios_group_List;
+        private System.Windows.Forms.TextBox SMBios_UUID;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox SMBios_MLB;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox SMBios_serial;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox SMBios_model;
+        private System.Windows.Forms.CheckedListBox Essentials_list2;
+        private System.Windows.Forms.Panel panel_EFIDrivers;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckedListBox Drivers_list;
     }
 }
 
