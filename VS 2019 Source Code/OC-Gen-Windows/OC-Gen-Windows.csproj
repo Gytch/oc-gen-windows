@@ -58,7 +58,7 @@
     <Compile Include="ConfigHardware.cs" />
     <Compile Include="ConfigACPI.cs" />
     <Compile Include="EFIBuilder.cs" />
-    <Compile Include="ConfigKext.cs" />
+    <Compile Include="ConfigFiles.cs" />
     <Compile Include="MainWidget.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -64,8 +64,6 @@ namespace OC_Gen_Windows
             this.Network_wifiList = new System.Windows.Forms.CheckedListBox();
             this.Network_ethernetList = new System.Windows.Forms.CheckedListBox();
             this.Kext_Laptop = new System.Windows.Forms.TabPage();
-            this.Laptops_group_VoodooI2C = new XanderUI.XUICustomGroupbox();
-            this.Laptops_plugins_list = new System.Windows.Forms.CheckedListBox();
             this.Laptops_listBox = new System.Windows.Forms.CheckedListBox();
             this.kextsPanel_btn_Laptop = new System.Windows.Forms.Button();
             this.kextsPanel_btn_Network = new System.Windows.Forms.Button();
@@ -116,7 +114,6 @@ namespace OC_Gen_Windows
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Kext_Network.SuspendLayout();
             this.Kext_Laptop.SuspendLayout();
-            this.Laptops_group_VoodooI2C.SuspendLayout();
             this.panel_Generate.SuspendLayout();
             this.panel_Quirks.SuspendLayout();
             this.panel_SMBios.SuspendLayout();
@@ -134,12 +131,12 @@ namespace OC_Gen_Windows
             this.panel_MainWidget.Controls.Add(this.tab_Drivers);
             this.panel_MainWidget.Controls.Add(this.tab_Kexts);
             this.panel_MainWidget.Controls.Add(this.tab_Hardware);
+            this.panel_MainWidget.Controls.Add(this.panel_SMBios);
             this.panel_MainWidget.Controls.Add(this.panel_Hardware);
             this.panel_MainWidget.Controls.Add(this.panel_Kexts);
             this.panel_MainWidget.Controls.Add(this.panel_Generate);
             this.panel_MainWidget.Controls.Add(this.panel_EFIDrivers);
             this.panel_MainWidget.Controls.Add(this.panel_Quirks);
-            this.panel_MainWidget.Controls.Add(this.panel_SMBios);
             this.panel_MainWidget.Location = new System.Drawing.Point(2, 42);
             this.panel_MainWidget.Name = "panel_MainWidget";
             this.panel_MainWidget.Size = new System.Drawing.Size(925, 319);
@@ -415,7 +412,7 @@ namespace OC_Gen_Windows
             this.audio_textbox_Alcid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
             this.audio_textbox_Alcid.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.audio_textbox_Alcid.ForeColor = System.Drawing.Color.White;
-            this.audio_textbox_Alcid.Location = new System.Drawing.Point(327, 10);
+            this.audio_textbox_Alcid.Location = new System.Drawing.Point(324, 15);
             this.audio_textbox_Alcid.MaxLength = 2;
             this.audio_textbox_Alcid.Name = "audio_textbox_Alcid";
             this.audio_textbox_Alcid.Size = new System.Drawing.Size(127, 30);
@@ -439,8 +436,8 @@ namespace OC_Gen_Windows
             this.Audio_checkLlist.ForeColor = System.Drawing.Color.White;
             this.Audio_checkLlist.FormattingEnabled = true;
             this.Audio_checkLlist.Items.AddRange(new object[] {
-            "AppleALC",
-            "VoodooHDA"});
+            "AppleALC.kext",
+            "VoodooHDA.kext"});
             this.Audio_checkLlist.Location = new System.Drawing.Point(12, 11);
             this.Audio_checkLlist.Name = "Audio_checkLlist";
             this.Audio_checkLlist.Size = new System.Drawing.Size(250, 104);
@@ -586,7 +583,6 @@ namespace OC_Gen_Windows
             // Kext_Laptop
             // 
             this.Kext_Laptop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
-            this.Kext_Laptop.Controls.Add(this.Laptops_group_VoodooI2C);
             this.Kext_Laptop.Controls.Add(this.Laptops_listBox);
             this.Kext_Laptop.Location = new System.Drawing.Point(4, 30);
             this.Kext_Laptop.Name = "Kext_Laptop";
@@ -595,35 +591,6 @@ namespace OC_Gen_Windows
             this.Kext_Laptop.TabIndex = 4;
             this.Kext_Laptop.Text = "Laptops";
             // 
-            // Laptops_group_VoodooI2C
-            // 
-            this.Laptops_group_VoodooI2C.BorderColor = System.Drawing.Color.LightCyan;
-            this.Laptops_group_VoodooI2C.BorderWidth = 1;
-            this.Laptops_group_VoodooI2C.Controls.Add(this.Laptops_plugins_list);
-            this.Laptops_group_VoodooI2C.Location = new System.Drawing.Point(291, 10);
-            this.Laptops_group_VoodooI2C.Name = "Laptops_group_VoodooI2C";
-            this.Laptops_group_VoodooI2C.ShowText = true;
-            this.Laptops_group_VoodooI2C.Size = new System.Drawing.Size(366, 100);
-            this.Laptops_group_VoodooI2C.TabIndex = 29;
-            this.Laptops_group_VoodooI2C.TabStop = false;
-            this.Laptops_group_VoodooI2C.Text = "VoodooI2CPlugins";
-            this.Laptops_group_VoodooI2C.TextColor = System.Drawing.Color.LightCyan;
-            // 
-            // Laptops_plugins_list
-            // 
-            this.Laptops_plugins_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
-            this.Laptops_plugins_list.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.Laptops_plugins_list.ForeColor = System.Drawing.Color.White;
-            this.Laptops_plugins_list.FormattingEnabled = true;
-            this.Laptops_plugins_list.Items.AddRange(new object[] {
-            "VoodooI2CHID.kext",
-            "VoodooI2CElan.kext",
-            "VoodooI2CSynaptics.kext"});
-            this.Laptops_plugins_list.Location = new System.Drawing.Point(19, 25);
-            this.Laptops_plugins_list.Name = "Laptops_plugins_list";
-            this.Laptops_plugins_list.Size = new System.Drawing.Size(330, 54);
-            this.Laptops_plugins_list.TabIndex = 30;
-            // 
             // Laptops_listBox
             // 
             this.Laptops_listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
@@ -631,9 +598,7 @@ namespace OC_Gen_Windows
             this.Laptops_listBox.ForeColor = System.Drawing.Color.White;
             this.Laptops_listBox.FormattingEnabled = true;
             this.Laptops_listBox.Items.AddRange(new object[] {
-            "VoodooPS2.kext",
-            "VoodooI2C.kext",
-            "VoodooSMBus.kext"});
+            "VoodooPS2.kext"});
             this.Laptops_listBox.Location = new System.Drawing.Point(24, 10);
             this.Laptops_listBox.Name = "Laptops_listBox";
             this.Laptops_listBox.Size = new System.Drawing.Size(250, 104);
@@ -781,9 +746,11 @@ namespace OC_Gen_Windows
             this.Generate_debugWindow.Location = new System.Drawing.Point(12, 42);
             this.Generate_debugWindow.Multiline = true;
             this.Generate_debugWindow.Name = "Generate_debugWindow";
+            this.Generate_debugWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Generate_debugWindow.Size = new System.Drawing.Size(703, 153);
             this.Generate_debugWindow.TabIndex = 1;
             this.Generate_debugWindow.Text = "LAUNCHED -> DEBUG WINDOW\r\n";
+            this.Generate_debugWindow.TextChanged += new System.EventHandler(this.Generate_debugWindow_TextChanged);
             // 
             // label6
             // 
@@ -858,7 +825,7 @@ namespace OC_Gen_Windows
             // SMBios_model
             // 
             this.SMBios_model.Location = new System.Drawing.Point(114, 55);
-            this.SMBios_model.MaxLength = 12;
+            this.SMBios_model.MaxLength = 16;
             this.SMBios_model.Name = "SMBios_model";
             this.SMBios_model.Size = new System.Drawing.Size(213, 26);
             this.SMBios_model.TabIndex = 15;
@@ -1097,8 +1064,6 @@ namespace OC_Gen_Windows
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Kext_Network.ResumeLayout(false);
             this.Kext_Laptop.ResumeLayout(false);
-            this.Laptops_group_VoodooI2C.ResumeLayout(false);
-            this.Laptops_group_VoodooI2C.PerformLayout();
             this.panel_Generate.ResumeLayout(false);
             this.panel_Generate.PerformLayout();
             this.panel_Quirks.ResumeLayout(false);
@@ -1117,79 +1082,77 @@ namespace OC_Gen_Windows
 
         #endregion
 
-        private System.Windows.Forms.PictureBox btn_Close;
-        private System.Windows.Forms.Panel panel_MainWidget;
-        private System.Windows.Forms.Label label_windowTitle;
-        private System.Windows.Forms.Button tab_Hardware;
-        private System.Windows.Forms.Button tab_Kexts;
-        private System.Windows.Forms.Button tab_Drivers;
-        private System.Windows.Forms.Button tab_Generate;
-        private System.Windows.Forms.Button tab_SMBios;
-        private System.Windows.Forms.Button tab_Quirks;
-        private System.Windows.Forms.Label label_Stripo;
-        private System.Windows.Forms.ToolTip hover_InformationTip;
-        private System.Windows.Forms.Panel panel_Hardware;
-        private System.Windows.Forms.Label label1;
-        private XanderUI.XUIButton trigger_AMDHardware;
-        private XanderUI.XUIButton trigger_HEDTHardware;
-        private XanderUI.XUIButton trigger_IntelHARDWARE;
-        private System.Windows.Forms.ComboBox hardware_comboBox;
-        private System.Windows.Forms.Panel panel_Kexts;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button kextsPanel_btn_Graphics;
-        private System.Windows.Forms.Button kextsPanel_btn_Audio;
-        private System.Windows.Forms.Button kextsPanel_btn_Essentials;
-        private System.Windows.Forms.Button kextsPanel_btn_Network;
-        private System.Windows.Forms.Button kextsPanel_btn_Laptop;
-        private System.Windows.Forms.TabControl KextsTab;
-        private System.Windows.Forms.TabPage kext_Essentials;
-        private System.Windows.Forms.TabPage Kext_Audio;
-        private System.Windows.Forms.CheckedListBox Essentials_checkList;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox Audio_checkLlist;
-        private System.Windows.Forms.TextBox audio_textbox_Alcid;
-        private System.Windows.Forms.TabPage Kext_Graphics;
-        private System.Windows.Forms.TabPage Kext_Network;
-        private System.Windows.Forms.TabPage Kext_Laptop;
-        private System.Windows.Forms.RadioButton Graphics_Intel;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.RadioButton Graphics_AMD;
-        private XanderUI.XUICustomGroupbox Graphics_Intel_group;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Graphics_textbox_AAPL;
-        private System.Windows.Forms.CheckedListBox Network_ethernetList;
-        private System.Windows.Forms.CheckedListBox Network_wifiList;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel_Generate;
-        private System.Windows.Forms.TextBox Generate_debugWindow;
-        private System.Windows.Forms.Label label6;
-        private XanderUI.XUISuperButton Generate_btn_ClearDebugs;
-        private System.Windows.Forms.Button Generate_btn_Gen;
-        private XanderUI.XUICustomGroupbox Laptops_group_VoodooI2C;
-        private System.Windows.Forms.CheckedListBox Laptops_listBox;
-        private System.Windows.Forms.CheckedListBox Laptops_plugins_list;
-        private System.Windows.Forms.Panel panel_Quirks;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel_SMBios;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private XanderUI.XUICustomGroupbox SMbios_group_List;
-        private System.Windows.Forms.TextBox SMBios_UUID;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox SMBios_MLB;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox SMBios_serial;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox SMBios_model;
-        private System.Windows.Forms.CheckedListBox Essentials_list2;
-        private System.Windows.Forms.Panel panel_EFIDrivers;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckedListBox Drivers_list;
+        public System.Windows.Forms.PictureBox btn_Close;
+        public System.Windows.Forms.Panel panel_MainWidget;
+        public System.Windows.Forms.Label label_windowTitle;
+        public System.Windows.Forms.Button tab_Hardware;
+        public System.Windows.Forms.Button tab_Kexts;
+        public System.Windows.Forms.Button tab_Drivers;
+        public System.Windows.Forms.Button tab_Generate;
+        public System.Windows.Forms.Button tab_SMBios;
+        public System.Windows.Forms.Button tab_Quirks;
+        public System.Windows.Forms.Label label_Stripo;
+        public System.Windows.Forms.ToolTip hover_InformationTip;
+        public System.Windows.Forms.Panel panel_Hardware;
+        public System.Windows.Forms.Label label1;
+        public XanderUI.XUIButton trigger_AMDHardware;
+        public XanderUI.XUIButton trigger_HEDTHardware;
+        public XanderUI.XUIButton trigger_IntelHARDWARE;
+        public System.Windows.Forms.ComboBox hardware_comboBox;
+        public System.Windows.Forms.Panel panel_Kexts;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Button kextsPanel_btn_Graphics;
+        public System.Windows.Forms.Button kextsPanel_btn_Audio;
+        public System.Windows.Forms.Button kextsPanel_btn_Essentials;
+        public System.Windows.Forms.Button kextsPanel_btn_Network;
+        public System.Windows.Forms.Button kextsPanel_btn_Laptop;
+        public System.Windows.Forms.TabControl KextsTab;
+        public System.Windows.Forms.TabPage kext_Essentials;
+        public System.Windows.Forms.TabPage Kext_Audio;
+        public System.Windows.Forms.CheckedListBox Essentials_checkList;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.CheckedListBox Audio_checkLlist;
+        public System.Windows.Forms.TextBox audio_textbox_Alcid;
+        public System.Windows.Forms.TabPage Kext_Graphics;
+        public System.Windows.Forms.TabPage Kext_Network;
+        public System.Windows.Forms.TabPage Kext_Laptop;
+        public System.Windows.Forms.RadioButton Graphics_Intel;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.RadioButton Graphics_AMD;
+        public XanderUI.XUICustomGroupbox Graphics_Intel_group;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox Graphics_textbox_AAPL;
+        public System.Windows.Forms.CheckedListBox Network_ethernetList;
+        public System.Windows.Forms.CheckedListBox Network_wifiList;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Panel panel_Generate;
+        public System.Windows.Forms.TextBox Generate_debugWindow;
+        public System.Windows.Forms.Label label6;
+        public XanderUI.XUISuperButton Generate_btn_ClearDebugs;
+        public System.Windows.Forms.Button Generate_btn_Gen;
+        public System.Windows.Forms.CheckedListBox Laptops_listBox;
+        public System.Windows.Forms.Panel panel_Quirks;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Panel panel_SMBios;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label12;
+        public XanderUI.XUICustomGroupbox SMbios_group_List;
+        public System.Windows.Forms.TextBox SMBios_UUID;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox SMBios_MLB;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox SMBios_serial;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox SMBios_model;
+        public System.Windows.Forms.CheckedListBox Essentials_list2;
+        public System.Windows.Forms.Panel panel_EFIDrivers;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.CheckedListBox Drivers_list;
     }
 }
 

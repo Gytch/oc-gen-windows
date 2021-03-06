@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using System.IO;
-using System.Diagnostics;
 using System.Drawing;
 
 namespace OC_Gen_Windows
@@ -369,11 +366,26 @@ namespace OC_Gen_Windows
             btn_Close.Enabled = false;
             Generate_btn_Gen.Enabled = false;
             Generate_debugWindow.ReadOnly = true;
+            ConfigFiles.addKextsFromConfig();
+            ConfigFiles.addDriversfromConfig();
+            // ADD Log
+            Generate_debugWindow.Text += " !-- Grabbing hardware information --!" + Environment.NewLine;
+            Generate_debugWindow.Text += "Hardware Detected ->" + hardware_comboBox.SelectedItem.ToString();
+            Generate_debugWindow.Text += Environment.NewLine + " !-- ADDING FILES --! ";
+            Generate_debugWindow.Text += Environment.NewLine + ConfigFiles.kexts ;
+            Generate_debugWindow.Text += Environment.NewLine + ConfigFiles.efidrivers;
+            Generate_debugWindow.Text += Environment.NewLine + "Getting Boot Args =>" + Environment.NewLine + bootargs ;
+            Generate_debugWindow.Text += Environment.NewLine + "Getting SMBios Information";
+            Generate_debugWindow.Text += Environment.NewLine + "Model:" + SMBios_model.Text  +"" ;
+            Generate_debugWindow.Text += Environment.NewLine + "Serial:" + SMBios_serial.Text + "";
+            Generate_debugWindow.Text += Environment.NewLine + "Serial Board Number:" + SMBios_MLB.Text + "";
+            Generate_debugWindow.Text += Environment.NewLine + "UUID:" + SMBios_UUID.Text + "";
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            bootargs = textBox1.Text;
         }
 
         private void SMbios_group_List_Enter(object sender, EventArgs e)
@@ -391,6 +403,12 @@ namespace OC_Gen_Windows
 
         }
 
-       
+        private void Generate_debugWindow_TextChanged(object sender, EventArgs e)
+        {
+            Generate_debugWindow.Focus();
+            Generate_debugWindow.SelectionStart = Generate_debugWindow.Text.Length;
+            Generate_debugWindow.ScrollToCaret();
+            Generate_debugWindow.Refresh();
+        }
     }
 }
