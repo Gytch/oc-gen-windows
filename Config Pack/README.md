@@ -6,7 +6,7 @@ So we can add them in the actual solution and program
 
 **Still Not Complete**
 What need to be added
-- Opencore EFI Drivers
+- ~Opencore EFI Drivers~
 - Opencore Prebuilt SSDT
 - ~Opencore Base Files~
-- Opencore Kexts
+- ~Opencore Kexts~
